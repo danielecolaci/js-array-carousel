@@ -36,6 +36,17 @@ prevButton.addEventListener('click', function () {
     activeImage--
     console.log(activeImage);
 
+    const currentImage = document.querySelector('img.active');
+    console.log(currentImage);
+    currentImage.classList.remove('active');
+
+    const allImage = document.querySelectorAll('.content img');
+
+    console.log((activeImage, content, allImage));
+    console.log(allImage[activeImage]);
+
+    allImage[activeImage].classList.add('active');
+
 })
 
 // Next
